@@ -10,9 +10,9 @@ public class UserDTO {
 	private String nome;
 	private Integer idade;
 	private String email;
-	private Integer telefone;
-	private Integer dateNasc;
-	private Integer cpf;
+	private Long telefone;
+	private Long dateNasc;
+	private Long cpf;
 	private String imgUrl;
 	private String senha;
 	
@@ -57,27 +57,27 @@ public class UserDTO {
 		this.email = email;
 	}
 
-	public Integer getTelefone() {
+	public Long getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(Integer telefone) {
+	public void setTelefone(Long telefone) {
 		this.telefone = telefone;
 	}
 	
-	public Integer getDateNasc() {
+	public Long getDateNasc() {
 		return dateNasc;
 	}
 
-	public void setDateNasc(Integer dateNasc) {
+	public void setDateNasc(Long dateNasc) {
 		this.dateNasc = dateNasc;
 	}
 
-	public Integer getCpf() {
+	public Long getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(Integer cpf) {
+	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
 

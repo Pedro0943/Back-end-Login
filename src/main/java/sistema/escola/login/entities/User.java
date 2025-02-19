@@ -3,18 +3,19 @@ package sistema.escola.login.entities;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "tb_user")
 public class User {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private String nome;
 	private Integer idade;
 	private String email;
-	private Integer telefone;
-	private Integer dateNasc;
-	private Integer cpf;
+	private Long telefone;
+	private Long dateNasc;
+	private Long cpf;
 	private String imgUrl;
 	private String senha;
 	
@@ -24,7 +25,7 @@ public class User {
 	}
 
 
-	public User(Long id, String nome, Integer idade, String email, Integer telefone,Integer dateNasc, Integer cpf, String imgUrl,
+	public User(Long id, String nome, Integer idade, String email, Long telefone,Long dateNasc, Long cpf, String imgUrl,
 			String senha) {
 
 		this.id = id;
@@ -79,32 +80,32 @@ public class User {
 	}
 
 
-	public Integer getTelefone() {
+	public Long getTelefone() {
 		return telefone;
 	}
 
 
-	public void setTelefone(Integer telefone) {
+	public void setTelefone(Long telefone) {
 		this.telefone = telefone;
 	}
 
 
-	public Integer getCpf() {
-		return cpf;
-	}
 	
 
-	public Integer getDateNasc() {
+	public Long getDateNasc() {
 		return dateNasc;
 	}
 
 
-	public void setDateNasc(Integer dateNasc) {
+	public void setDateNasc(Long dateNasc) {
 		this.dateNasc = dateNasc;
 	}
 
+	public Long getCpf() {
+		return cpf;
+	}
 
-	public void setCpf(Integer cpf) {
+	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
 
