@@ -1,6 +1,7 @@
 package sistema.escola.login.entities;
 
 import jakarta.persistence.*;
+import sistema.escola.login.dto.UserRequestDTO;
 
 @Entity
 @Table(name = "tb_user")
@@ -22,6 +23,13 @@ public class User {
 	
 	public User() {
 		
+	}
+	public User(UserRequestDTO saveUser) {
+		nome = saveUser.nome();
+		telefone = saveUser.telefone();
+		dateNasc= saveUser.dateNasc();
+		email = saveUser.email();
+		senha = saveUser.senha();
 	}
 
 
